@@ -15,6 +15,12 @@
         <li><%= link_to archive.name, blog_archive_path(archive.url_name) %></li>
       <% end %>
     </ul>
+    <h4>Tags</h4>
+    <ul>
+      <% tags.each do |tag| %>
+        <li><%= link_to tag.name, blog_tags_path(tag.name) %></li>
+      <% end %>
+    </ul>
   </div><!-- .one-third -->
   
 </div>

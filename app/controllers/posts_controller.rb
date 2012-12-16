@@ -16,4 +16,10 @@ class PostsController < ApplicationController
     render :index
   end
 
+  def tags
+    posts = Post.tagged_with(params[:tag]).order('created_at DESC')
+    @posts = posts.page(params[:page]).per(10)
+    render :index
+  end
+
 end

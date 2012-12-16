@@ -6,6 +6,7 @@ gem 'chronic'
 gem 'typus', '3.1.2'
 
 gem 'ckeditor'
+gem 'acts-as-taggable-on', '~> 2.3.1'
 
 gem 'paperclip'
 gem 'aws-s3', :require => 'aws/s3'

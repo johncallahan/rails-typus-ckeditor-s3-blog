@@ -3,6 +3,10 @@ module PostsHelper
   def archives
     Months.with_a_blog_post(Post.order('id DESC')).collect{|m| OpenStruct.new(:name => m.name + " (#{number_of_posts_in_this_month(Post.order('id DESC'), m)})", :url_name => m.url_name)}
   end
+
+  def tags
+    Post.tag_counts
+  end
   
   def number_of_posts_in_this_month(posts, month)
     posts.by_month(month.date).size

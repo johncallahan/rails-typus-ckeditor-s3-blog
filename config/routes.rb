@@ -4,6 +4,7 @@ Surgery::Application.routes.draw do
 
   resources :blog, :controller => "posts"
   get "/blog/archives/:archive_date" => "posts#archives", :as => "blog_archive"
+  get "/blog/tags/:tag" => "posts#tags", :as => "blog_tags"
   
   get "welcome/index"
   
