@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 
 gem 'chronic'
+gem 'devise'
 gem 'typus', '3.1.2'
 gem 'sprockets', "= 2.0.0"
 
