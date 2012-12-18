@@ -1,13 +1,13 @@
 <div class="row" id="welcome">
   <div class="two-thirds column">
     <div class="inner">
-      A content box
+      <%= link_to "Admin", admin_session_path %>
     </div><!-- .inner -->
   </div>
   
   <div class="one-third column">
     <div class="inner">
-      Another content box
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
     </div><!-- .inner -->
   </div>
 </div><!-- .row -->
