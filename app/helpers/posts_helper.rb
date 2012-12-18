@@ -5,7 +5,7 @@ module PostsHelper
   end
 
   def tags
-    Post.tag_counts
+    Post.tag_counts.sort{|a,b| a[:name] <=> b[:name]}
   end
   
   def number_of_posts_in_this_month(posts, month)
